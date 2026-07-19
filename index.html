@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#0b0514">
 <meta name="apple-touch-fullscreen" content="yes">
 <link rel="manifest" href="data:application/manifest+json,{%22name%22:%22Lightwork%22,%22short_name%22:%22Lightwork%22,%22display%22:%22standalone%22,%22background_color%22:%22%230b0514%22,%22theme_color%22:%22%230b0514%22,%22orientation%22:%22portrait%22}">
-<title>Lightwork v0.9.27</title>
+<title>Lightwork v0.9.28</title>
 <link href="fonts/fonts.css" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
@@ -636,7 +636,10 @@ body.ob-active .bottom-bar{display:none !important}
      that plague fixed positioning inside overflow:hidden iOS containers. */
   flex:0 0 auto;
   width:100%;
-  padding-bottom:env(safe-area-inset-bottom, 0px); /* home indicator, native */
+  /* Floating-pill clearance: hug the screen bottom, clearing the home
+     indicator graphic (~13pt tall zone) by a few pts instead of reserving
+     the full 34pt safe zone. Falls back to 10px on no-notch devices. */
+  padding-bottom:max(10px, calc(env(safe-area-inset-bottom, 0px) - 16px));
   background:transparent;
   z-index:30;
   pointer-events:none;
@@ -648,15 +651,15 @@ body:has(.st-sheet-overlay.open) .bottom-bar{
   opacity:0 !important;
   pointer-events:none !important;
 }
-/* Color backstop — fills the safe-area zone behind the nav so no black
-   strip shows in Safari standalone (Add to Home Screen). Sits behind the
-   glass pill, extends to the true bottom edge. */
+/* Soft bottom fade — replaces the old solid #0b0514 backstop, which read
+   as a dead band under the pill. A transparent→dark gradient grounds the
+   floating pill against the home-indicator zone without a visible strip. */
 .bottom-bar::after{
   content:'';
   position:absolute;
   left:0; right:0; bottom:0;
-  height:calc(env(safe-area-inset-bottom) + 8px);
-  background:#0b0514;
+  height:calc(env(safe-area-inset-bottom, 0px) + 24px);
+  background:linear-gradient(180deg, transparent 0%, rgba(8,4,18,0.55) 60%, rgba(8,4,18,0.85) 100%);
   z-index:-1;
   pointer-events:none;
 }
