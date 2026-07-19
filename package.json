@@ -6,6 +6,7 @@
   "scripts": {
     "sync": "cp lightwork.html www/index.html && cp lightwork.html index.html && npx cap sync ios",
     "open": "npx cap open ios",
+    "map": "node scripts/gen-code-map.js",
     "build": "npm run sync && npm run open"
   },
   "keywords": [],
