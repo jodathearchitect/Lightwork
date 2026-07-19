@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sync": "cp lightwork.html www/index.html && npx cap sync ios",
+    "sync": "cp lightwork.html www/index.html && cp lightwork.html index.html && npx cap sync ios",
     "open": "npx cap open ios",
     "build": "npm run sync && npm run open"
   },
