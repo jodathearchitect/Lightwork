@@ -1,6 +1,6 @@
 # Lightwork Code Map
 
-**Source:** `lightwork.html` · **Version:** Lightwork v0.9.30 · **Lines:** 13064
+**Source:** `lightwork.html` · **Version:** Lightwork v0.9.31 · **Lines:** 13064
 
 > Regenerate after edits with `npm run map` — line numbers drift.
 

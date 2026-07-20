@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#0b0514">
 <meta name="apple-touch-fullscreen" content="yes">
 <link rel="manifest" href="data:application/manifest+json,{%22name%22:%22Lightwork%22,%22short_name%22:%22Lightwork%22,%22display%22:%22standalone%22,%22background_color%22:%22%230b0514%22,%22theme_color%22:%22%230b0514%22,%22orientation%22:%22portrait%22}">
-<title>Lightwork v0.9.30</title>
+<title>Lightwork v0.9.31</title>
 <link href="fonts/fonts.css" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
@@ -1145,13 +1145,13 @@ body:has(.st-sheet-overlay.open) .bottom-bar{
 .move-tool-card-arrow{font-size:22px;color:var(--td);flex-shrink:0;font-weight:300}
 
 /* HABITS TAB MODULE PILLS — purple identity variant of the Move pills */
-.hb-pill{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:14px 8px;border-radius:16px;cursor:pointer;background:color-mix(in srgb,#3ed6c3 15%,rgba(16,9,30,0.85));border:1px solid color-mix(in srgb,#3ed6c3 55%,transparent);font-family:'DM Sans',sans-serif;transition:all 0.2s ease;-webkit-tap-highlight-color:transparent}
+.hb-pill{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:14px 8px;border-radius:16px;cursor:pointer;background:color-mix(in srgb,#8e2444 46%,rgba(16,9,30,0.85));border:1px solid color-mix(in srgb,#f0913c 45%,transparent);font-family:'DM Sans',sans-serif;transition:all 0.2s ease;-webkit-tap-highlight-color:transparent}
 .hb-pill:active{transform:scale(0.97)}
-.hb-pill.active{background:color-mix(in srgb,#3ed6c3 28%,rgba(16,9,30,0.85));border-color:color-mix(in srgb,#3ed6c3 85%,transparent);box-shadow:0 0 24px rgba(62,214,195,0.45)}
+.hb-pill.active{background:color-mix(in srgb,#a52a4e 60%,rgba(16,9,30,0.85));border-color:color-mix(in srgb,#ffa14f 80%,transparent);box-shadow:0 0 24px rgba(240,145,60,0.45)}
 .hb-pill-name{font-size:14px;font-weight:700;color:var(--tp);letter-spacing:-0.2px;line-height:1.15}
 .hb-pill-ic{font-size:11px;opacity:0.45;margin-left:4px;font-weight:400}
-.hb-pill-count{font-size:11px;font-weight:700;color:var(--td);letter-spacing:0.3px;background:rgba(62,214,195,0.10);border:1px solid rgba(62,214,195,0.18);border-radius:999px;padding:3px 9px}
-.hb-pill.active .hb-pill-count{color:#a9f0e4;background:rgba(62,214,195,0.20);border-color:rgba(62,214,195,0.45)}
+.hb-pill-count{font-size:11px;font-weight:700;color:var(--td);letter-spacing:0.3px;background:rgba(240,145,60,0.12);border:1px solid rgba(240,145,60,0.22);border-radius:999px;padding:3px 9px}
+.hb-pill.active .hb-pill-count{color:#ffcf9e;background:rgba(240,145,60,0.22);border-color:rgba(240,145,60,0.5)}
 .hb-panel{background:linear-gradient(180deg,rgba(167,139,218,0.07),rgba(14,8,24,0.45));border:1px solid rgba(167,139,218,0.22);border-radius:var(--r-lg);padding:16px;margin-bottom:16px;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);animation:hbPanelIn 0.25s ease}
 @keyframes hbPanelIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
 
@@ -2974,7 +2974,7 @@ body.ach-page-open .bottom-bar{display:none !important}
 /* ── v0.8.6 Tap-glow: chips & pills flare on press ── */
 .hb-pill,.move-tool-card{position:relative;overflow:hidden}
 .hb-pill::after,.move-tool-card::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;background:radial-gradient(circle at 50% 50%,var(--accent-glow),transparent 70%);transition:opacity 0.5s ease}
-.hb-pill::after{background:radial-gradient(circle at 50% 50%,rgba(62,214,195,0.40),transparent 70%)}
+.hb-pill::after{background:radial-gradient(circle at 50% 50%,rgba(240,145,60,0.40),transparent 70%)}
 .hb-pill:active::after,.move-tool-card:active::after{opacity:1;transition:opacity 0s}
 .hb-pill:active,.move-tool-card:active{transform:scale(0.97)}
 @keyframes chipPop{0%{transform:scale(1)}40%{transform:scale(1.08)}100%{transform:scale(1)}}
@@ -3069,7 +3069,7 @@ body.ach-page-open .bottom-bar{display:none !important}
 .day-hero-bar div{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--accent),color-mix(in srgb,var(--accent) 55%,#fff));box-shadow:0 0 10px var(--accent-glow);transition:width 0.4s ease}
 /* ── Surface lift: cards & pills pop off the aurora ── */
 .move-tool-card,.preset-card,.insight-card,.hb-panel,.tabata-card{box-shadow:var(--elev)}
-.hb-pill{box-shadow:0 6px 18px -8px rgba(0,0,0,0.55),0 0 18px -4px rgba(62,214,195,0.40)}
+.hb-pill{box-shadow:0 6px 18px -8px rgba(0,0,0,0.55),0 0 18px -4px rgba(240,145,60,0.35)}
 </style>
 <script>
 // Bridge navigator.vibrate → Capacitor Haptics on iOS (no-op on web)
